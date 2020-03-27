@@ -102,7 +102,8 @@ y_pred = classifier.predict(X_test)
 describe = pd.DataFrame(y_pred).describe()
 
 # Pick 50% 
-y_pred_activation = (y_pred > 0.5017)    
+tr =  pd.DataFrame(y_pred).quantile(0.5).values[0]
+y_pred_activation = (y_pred > tr)    
 
 # Making the Confusion Matrix
 cm = confusion_matrix(y_test, y_pred_activation)

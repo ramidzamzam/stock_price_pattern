@@ -1,4 +1,6 @@
 # Convert historical stock data to array[0 : N -1] close price to ditect patterns
+# By: Rami D
+# Date: 3/27/20
 
 # Importing the libraries
 import numpy as np
